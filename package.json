@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@primer/gatsby-theme-doctocat": "^0.24.1",
+    "gatsby": "^2.24.58",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "repository": "mvasilkov/mvasilkov",
+  "scripts": {
+    "develop": "gatsby develop"
+  }
+}
