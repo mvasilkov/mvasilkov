@@ -1,10 +1,12 @@
 {
+  "author": "Mark Vasilkov (https://github.com/mvasilkov)",
   "dependencies": {
-    "@primer/gatsby-theme-doctocat": "^0.24.1",
-    "gatsby": "^2.24.58",
+    "@primer/gatsby-theme-doctocat": "^0.25.3",
+    "gatsby": "^2.24.63",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
+  "license": "SEE LICENSE IN LICENSE",
   "repository": "mvasilkov/mvasilkov",
   "scripts": {
     "develop": "gatsby develop"
