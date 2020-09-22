@@ -3,7 +3,6 @@ import Downshift from 'downshift'
 import {navigate} from 'gatsby'
 import React from 'react'
 import useSearch from '@primer/gatsby-theme-doctocat/src/use-search'
-import useSiteMetadata from '@primer/gatsby-theme-doctocat/src/use-site-metadata'
 import DarkTextInput from '@primer/gatsby-theme-doctocat/src/components/dark-text-input'
 import SearchResults from '@primer/gatsby-theme-doctocat/src/components/search-results'
 
@@ -23,7 +22,6 @@ function stateReducer(state, changes) {
 function Search() {
   const [query, setQuery] = React.useState('')
   const results = useSearch(query)
-  const siteMetadata = useSiteMetadata()
 
   return (
     <Downshift
@@ -54,7 +52,7 @@ function Search() {
         <Position {...getRootProps({position: 'relative'})}>
           <DarkTextInput
             {...getInputProps({
-              placeholder: `Search ${siteMetadata.title}`,
+              placeholder: `Search`,
               width: 240,
             })}
           />
