@@ -5,6 +5,11 @@ module.exports = {
         description: 'Computer programmer and security enthusiast from Israel',
     },
     plugins: [
-        '@primer/gatsby-theme-doctocat',
+        {
+            resolve: '@primer/gatsby-theme-doctocat',
+            options: {
+                icon: './static/icon.svg',
+            },
+        },
     ],
 }
