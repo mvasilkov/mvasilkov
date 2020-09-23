@@ -1,7 +1,5 @@
 import {Box, Flex, Link, StyledOcticon, Sticky} from '@primer/components'
 import {
-  ChevronRightIcon,
-  MarkGithubIcon,
   SearchIcon,
   ThreeBarsIcon,
 } from '@primer/octicons-react'
@@ -15,6 +13,7 @@ import MobileSearch from '@primer/gatsby-theme-doctocat/src/components/mobile-se
 import NavDrawer, {useNavDrawerState} from '@primer/gatsby-theme-doctocat/src/components/nav-drawer'
 import NavDropdown, {NavDropdownItem} from '@primer/gatsby-theme-doctocat/src/components/nav-dropdown'
 import Search from '@primer/gatsby-theme-doctocat/src/components/search'
+import {Favicon} from '../../../components/icons'
 
 export const HEADER_HEIGHT = 66
 
@@ -36,33 +35,17 @@ function Header({isSearchEnabled}) {
       >
         <Flex alignItems="center">
           <Link
-            href="https://primer.style"
+            as={GatsbyLink}
+            to="/"
             color="blue.4"
             mr={3}
             lineHeight="condensedUltra"
           >
-            <StyledOcticon icon={MarkGithubIcon} size="medium" />
-          </Link>
-          <Link
-            display={[
-              // We only hide "Primer" on small viewports if a shortName is defined.
-              siteMetadata.shortName ? 'none' : 'inline-block',
-              null,
-              null,
-              'inline-block',
-            ]}
-            href="https://primer.style"
-            color="blue.4"
-            fontFamily="mono"
-          >
-            Primer
+            <StyledOcticon icon={Favicon} size="medium" />
           </Link>
 
           {siteMetadata.shortName ? (
             <>
-              <Box display={['none', null, null, 'inline-block']} mx={2}>
-                <StyledOcticon icon={ChevronRightIcon} color="blue.4" />
-              </Box>
               <Link as={GatsbyLink} to="/" color="blue.4" fontFamily="mono">
                 {siteMetadata.shortName}
               </Link>

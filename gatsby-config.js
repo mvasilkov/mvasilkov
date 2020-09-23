@@ -8,7 +8,7 @@ module.exports = {
         {
             resolve: '@primer/gatsby-theme-doctocat',
             options: {
-                icon: './static/icon.svg',
+                icon: './static/favicon.svg',
             },
         },
     ],
