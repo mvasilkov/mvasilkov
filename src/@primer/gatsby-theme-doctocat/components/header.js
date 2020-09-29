@@ -37,7 +37,7 @@ function Header({isSearchEnabled}) {
           <Link
             as={GatsbyLink}
             to="/"
-            color="blue.4"
+            color="rei.pink"
             mr={3}
             lineHeight="condensedUltra"
           >
@@ -46,7 +46,7 @@ function Header({isSearchEnabled}) {
 
           {siteMetadata.shortName ? (
             <>
-              <Link as={GatsbyLink} to="/" color="blue.4" fontFamily="mono">
+              <Link as={GatsbyLink} to="/" color="rei.pink" fontFamily="mono">
                 {siteMetadata.shortName}
               </Link>
             </>
