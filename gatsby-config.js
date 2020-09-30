@@ -5,6 +5,7 @@ module.exports = {
         description: 'Computer programmer and security enthusiast from Israel',
     },
     plugins: [
+        'gatsby-plugin-sass',
         {
             resolve: '@primer/gatsby-theme-doctocat',
             options: {

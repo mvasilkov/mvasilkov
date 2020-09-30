@@ -13,4 +13,4 @@ theme.colors.rei = {
 }
 
 theme.fonts.normal = `-apple-system, 'Segoe UI', 'DejaVu Sans', system-ui, sans-serif`
-theme.fonts.mono = `'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace`
+theme.fonts.mono = `'SF Mono', SFMono-Regular, ui-monospace, 'IBM Plex Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace`
