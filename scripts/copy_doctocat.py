@@ -28,7 +28,7 @@ def run():
     from_dir = current_dir / 'node_modules/@primer/gatsby-theme-doctocat/src/components'
     to_dir = current_dir / 'src/@primer/gatsby-theme-doctocat/components'
 
-    for f in ('header.js', 'search.js'):
+    for f in ('header.js', 'hero.js', 'nav-drawer.js', 'search.js'):
         copy2(from_dir / f, to_dir / f)
         rel_abs_path(to_dir / f)
 
