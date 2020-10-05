@@ -9,6 +9,7 @@ average == mix(#ff5858, #f857a6) == #fc587f
 */
 
 theme.colors.rei = {
+    offwhite: '#fbfbfb',
     pink: '#fc587f',
 }
 

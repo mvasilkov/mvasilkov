@@ -22,7 +22,7 @@ export function useNavDrawerState(breakpoint) {
     if (window.innerWidth >= breakpoint) {
       setOpen(false)
     }
-  }, [setOpen])
+  }, [breakpoint, setOpen])
 
   const debouncedOnResize = React.useCallback(debounce(onResize, 250), [
     onResize,
@@ -66,12 +66,8 @@ function NavDrawer({isOpen, onDismiss}) {
               alignItems="center"
               justifyContent="space-between"
             >
-              <Link
-                href="https://primer.style"
-                fontFamily="mono"
-                color="inherit"
-              >
-                Primer
+              <Link as={GatsbyLink} to="/" color="rei.pink" fontFamily="mono">
+                {siteMetadata.shortName}
               </Link>
               <DarkButton aria-label="Close" onClick={onDismiss}>
                 <XIcon />
@@ -89,17 +85,6 @@ function NavDrawer({isOpen, onDismiss}) {
             color="gray.7"
             bg="gray.0"
           >
-            <Link
-              as={GatsbyLink}
-              to="/"
-              display="inline-block"
-              color="inherit"
-              fontFamily="mono"
-              mx={4}
-              my={4}
-            >
-              {siteMetadata.title}
-            </Link>
             <NavItems items={navItems} />
           </Flex>
         ) : null}
