@@ -1,0 +1,26 @@
+---
+title: Contents
+---
+
+import { graphql } from 'gatsby'
+
+export const pageQuery = graphql`
+  query Contents {
+    allMdx {
+      nodes {
+        frontmatter {
+          title
+        }
+        slug
+      }
+    }
+  }
+`
+
+<ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+    {props.data.allMdx.nodes.map(({ frontmatter, slug }) => (
+        <li key={slug}>
+            <a href={`/${slug}`}>{frontmatter.title}</a>
+        </li>
+    ))}
+</ul>
