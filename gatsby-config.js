@@ -1,4 +1,4 @@
-const fontDisplay = require('./postcss/font-display')
+// const fontDisplay = require('./postcss/font-display')
 
 module.exports = {
     siteMetadata: {
@@ -11,7 +11,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-sass',
             options: {
-                postCssPlugins: [fontDisplay()],
+                // postCssPlugins: [fontDisplay()],
             },
         },
         {

@@ -1,6 +1,6 @@
-$font-prefix: '../../node_modules/@ibm/plex';
+$font-dir: '../../node_modules/jetbrains-mono/fonts/web';
 
-@import '~@ibm/plex/scss/mono/index';
+@import '~jetbrains-mono/scss/jetbrains-mono';
 
 b, strong {
     font-weight: 600;
