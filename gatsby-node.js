@@ -1,19 +1,21 @@
+const gitDates = require('./generated/git-dates.json')
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
 
     if (node.internal.type !== 'Mdx')
         return
 
-    const file = getNode(node.parent).relativePath
+    const file = 'content/' + getNode(node.parent).relativePath
 
     createNodeField({
         node,
         name: 'created',
-        value: 0,
+        value: gitDates[file].created ?? 0,
     })
     createNodeField({
         node,
         name: 'updated',
-        value: 0,
+        value: gitDates[file].modified ?? 0,
     })
 }
