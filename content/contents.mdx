@@ -8,6 +8,10 @@ export const pageQuery = graphql`
   query Contents {
     allMdx {
       nodes {
+        fields {
+          created
+          updated
+        }
         frontmatter {
           title
         }
@@ -18,7 +22,7 @@ export const pageQuery = graphql`
 `
 
 <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
-    {props.data.allMdx.nodes.map(({ frontmatter, slug }) => (
+    {props.data.allMdx.nodes.map(({ fields, frontmatter, slug }) => (
         <li key={slug}>
             <a href={`/${slug}`}>{frontmatter.title}</a>
         </li>
