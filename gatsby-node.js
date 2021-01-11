@@ -11,11 +11,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
         node,
         name: 'created',
-        value: gitDates[file].created ?? 0,
+        value: gitDates[file]?.created ?? 0,
     })
     createNodeField({
         node,
         name: 'updated',
-        value: gitDates[file].modified ?? 0,
+        value: gitDates[file]?.modified ?? 0,
     })
 }
